@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85016CA7-7628-4E77-8E8B-65FD22ED57B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NDDDSample.Tests</RootNamespace>
+    <AssemblyName>NDDDSample.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\NDDDSample.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\tools\Moq\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\tools\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Commons.NHibernate, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\Rhino.Commons.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.35.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Rhino\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC 2\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\Builders\BitConverterUtilTest.cs" />
+    <Compile Include="Infrastructure\Builders\EqualsBuilderTest.cs" />
+    <Compile Include="Infrastructure\Builders\HashCodeBuilderTest.cs" />
+    <Compile Include="Infrastructure\Builders\MathUtilTest.cs" />
+    <Compile Include="Infrastructure\Builders\ToStringBuilderTest.cs" />
+    <Compile Include="Domain\Model\Cargos\CargoTest.cs" />
+    <Compile Include="Domain\Model\Cargos\DeliveryTest.cs" />
+    <Compile Include="Domain\Model\Cargos\ItineraryTest.cs" />
+    <Compile Include="Domain\Model\Cargos\LegTest.cs" />
+    <Compile Include="Domain\Model\Cargos\RouteSpecificationTest.cs" />
+    <Compile Include="Domain\Model\Cargos\TrackingIdTest.cs" />
+    <Compile Include="Domain\Model\Handlings\HandlingHistoryTest.cs" />
+    <Compile Include="Domain\Model\Handlings\HandlingEventTest.cs" />
+    <Compile Include="Domain\Model\Handlings\HandlingEventFactoryTest.cs" />
+    <Compile Include="Domain\Model\Locations\UnLocodeTest.cs" />
+    <Compile Include="Domain\Model\Locations\LocationTest.cs" />
+    <Compile Include="Domain\Model\Voyages\CarrierMovementTest.cs" />
+    <Compile Include="Domain\Model\Voyages\VoyageTest.cs" />
+    <Compile Include="Domain\Model\Voyages\VoyageNumberTest.cs" />
+    <Compile Include="Domain\Model\Voyages\ScheduleTest.cs" />
+    <Compile Include="Infrastructure\Messaging\Stub\SynchronousApplicationEventsStub.cs" />
+    <Compile Include="Infrastructure\Persistence\Inmemory\CargoRepositoryInMem.cs" />
+    <Compile Include="Infrastructure\Persistence\Inmemory\HandlingEventRepositoryInMem.cs" />
+    <Compile Include="Infrastructure\Persistence\Inmemory\LocationRepositoryInMem.cs" />
+    <Compile Include="Infrastructure\Persistence\Inmemory\VoyageRepositoryInMem.cs" />
+    <Compile Include="Infrastructure\Persistence\NHibernate\BaseRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Persistence\NHibernate\CargoRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Persistence\NHibernate\CarrierMovementRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Persistence\NHibernate\HandlingEventRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Persistence\NHibernate\LocationRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Routing\ExternalRoutingServiceTest.cs" />
+    <Compile Include="Presentation\CargoAdmin\CargoAdminControllerTest.cs" />
+    <Compile Include="Presentation\CargoAdmin\RegistrationCommandTest.cs" />
+    <Compile Include="Presentation\ControllerTestExtentions.cs" />
+    <Compile Include="Presentation\Tracking\CargoTrackingControllerTest.cs" />
+    <Compile Include="Presentation\Tracking\CargoTrackingViewAdapterTest.cs" />
+    <Compile Include="Presentation\Tracking\TrackCommandTest.cs" />
+    <Compile Include="Scenarios\CargoLifecycleScenarioTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestCategories.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Content Include="nh-windsor.boo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\NDDDSample.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\application\NDDDSample.Application\NDDDSample.Application.csproj">
+      <Project>{D9890BDD-C115-48F2-9A12-80A516A31ED0}</Project>
+      <Name>NDDDSample.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\domain\NDDDSample.Domain\NDDDSample.Domain.csproj">
+      <Project>{A57A3967-E613-4598-94FF-BD55711D4CAD}</Project>
+      <Name>NDDDSample.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\infrastructure\NDDDSample.Infrastructure.ExternalRouting\NDDDSample.Infrastructure.ExternalRouting.csproj">
+      <Project>{D3EC535E-06E8-4083-80CF-B94C58DC4052}</Project>
+      <Name>NDDDSample.Infrastructure.ExternalRouting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\infrastructure\NDDDSample.Infrastructure\NDDDSample.Infrastructure.csproj">
+      <Project>{6D41623A-7B9E-4DFA-8F2A-1B4EBEF7F990}</Project>
+      <Name>NDDDSample.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\infrastructure\NDDDSample.Persistence.NHibernate\NDDDSample.Persistence.NHibernate.csproj">
+      <Project>{97413EF7-9172-4467-AB4E-ED1155272BD5}</Project>
+      <Name>NDDDSample.Persistence.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\interfaces\NDDDSample.Interfaces.BookingRemoteService.Common\NDDDSample.Interfaces.BookingRemoteService.Common.csproj">
+      <Project>{B293706A-1955-4A51-9E87-E7F03FB3728B}</Project>
+      <Name>NDDDSample.Interfaces.BookingRemoteService.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\interfaces\NDDDSample.Interfaces.PathfinderRemoteService.Common\NDDDSample.Interfaces.PathfinderRemoteService.Common.csproj">
+      <Project>{053C0D25-1C3D-4F9F-9FBA-44762592C9D4}</Project>
+      <Name>NDDDSample.Interfaces.PathfinderRemoteService.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\interfaces\NDDDSample.Interfaces.PathfinderRemoteService\NDDDSample.Interfaces.PathfinderRemoteService.csproj">
+      <Project>{C61C3E52-729B-4EE3-A57E-C3D72CAEF65D}</Project>
+      <Name>NDDDSample.Interfaces.PathfinderRemoteService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\presentation\NDDDSample.Web.Controllers\NDDDSample.Web.Controllers.csproj">
+      <Project>{CA4C3E92-0FBC-4305-BD7C-D546FEAAA5D7}</Project>
+      <Name>NDDDSample.Web.Controllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

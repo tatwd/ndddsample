@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NDDDSample.Domain"
+                   namespace="NDDDSample.Domain.Model.Handlings" default-access="field">
+  
+  <class name="HandlingEvent" table="HandlingEvent">
+    <id name="id" column="id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="voyage" column="voyage_id" not-null="false" cascade="none" foreign-key="event_voyage_fk"/>
+    <many-to-one name="location" column="location_id" not-null="true" cascade="none" foreign-key="location_fk"/>
+    <many-to-one name="cargo" column="cargo_id" not-null="true" cascade="none" foreign-key="cargo_fk"/>
+    <property name="completionTime" column="completionTime" not-null="true"/>
+    <property name="registrationTime" column="registrationTime" not-null="true"/>    
+    <property name="type" column="type"
+                 type="NDDDSample.Persistence.NHibernate.TypeConverters.HandlingTypeConverter, NDDDSample.Persistence.NHibernate"/>
+  </class>
+</hibernate-mapping>

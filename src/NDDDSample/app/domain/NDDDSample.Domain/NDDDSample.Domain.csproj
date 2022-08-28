@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A57A3967-E613-4598-94FF-BD55711D4CAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NDDDSample.Domain</RootNamespace>
+    <AssemblyName>NDDDSample.Domain</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\NDDDSample.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Cargos\Cargo.cs" />
+    <Compile Include="Model\Cargos\CargoFactory.cs" />
+    <Compile Include="Model\Cargos\Delivery.cs" />
+    <Compile Include="Model\Cargos\HandlingActivity.cs" />
+    <Compile Include="Model\Cargos\ICargoRepository.cs" />
+    <Compile Include="Model\Cargos\Itinerary.cs" />
+    <Compile Include="Model\Cargos\Leg.cs" />
+    <Compile Include="Model\Cargos\RouteSpecification.cs" />
+    <Compile Include="Model\Cargos\RoutingStatus.cs" />
+    <Compile Include="Model\Cargos\TrackingId.cs" />
+    <Compile Include="Model\Cargos\TransportStatus.cs" />
+    <Compile Include="Model\Handlings\Exceptions\CannotCreateHandlingEventException.cs" />
+    <Compile Include="Model\Handlings\HandlingEvent.cs" />
+    <Compile Include="Model\Handlings\HandlingEventFactory.cs" />
+    <Compile Include="Model\Handlings\HandlingHistory.cs" />
+    <Compile Include="Model\Handlings\HandlingType.cs" />
+    <Compile Include="Model\Handlings\IHandlingEventRepository.cs" />
+    <Compile Include="Model\Handlings\Exceptions\UnknownCargoException.cs" />
+    <Compile Include="Model\Handlings\Exceptions\UnknownLocationException.cs" />
+    <Compile Include="Model\Handlings\Exceptions\UnknownVoyageException.cs" />
+    <Compile Include="Model\Locations\Location.cs" />
+    <Compile Include="Model\Locations\ILocationRepository.cs" />
+    <Compile Include="Model\Locations\SampleLocations.cs" />
+    <Compile Include="Model\Locations\UnLocode.cs" />
+    <Compile Include="Model\Voyages\CarrierMovement.cs" />
+    <Compile Include="Model\Voyages\IVoyageRepository.cs" />
+    <Compile Include="Model\Voyages\SampleVoyages.cs" />
+    <Compile Include="Model\Voyages\Schedule.cs" />
+    <Compile Include="Model\Voyages\Voyage.cs" />
+    <Compile Include="Model\Voyages\VoyageNumber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IRoutingService.cs" />
+    <Compile Include="Shared\AbstractSpecification.cs" />
+    <Compile Include="Shared\AndSpecification.cs" />
+    <Compile Include="Shared\DomainObjectUtils.cs" />
+    <Compile Include="Shared\Enumeration.cs" />
+    <Compile Include="Shared\IDomainEvent.cs" />
+    <Compile Include="Shared\IEntity.cs" />
+    <Compile Include="Shared\ISpecification.cs" />
+    <Compile Include="Shared\IValueObject.cs" />
+    <Compile Include="Shared\NotSpecification.cs" />
+    <Compile Include="Shared\OrSpecification.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\NDDDSample.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\infrastructure\NDDDSample.Infrastructure\NDDDSample.Infrastructure.csproj">
+      <Project>{6D41623A-7B9E-4DFA-8F2A-1B4EBEF7F990}</Project>
+      <Name>NDDDSample.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
